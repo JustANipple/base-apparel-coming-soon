@@ -32,12 +32,12 @@ p, h1, h2, h3, h4, h5, h6 {
     --par-clr: hsl(0, 36%, 70%);
     --email-error-clr: hsl(0, 93%, 68%);
     --coming-clr: hsl(0, 6%, 24%);
-    --mobile-grad: 135deg,
-        from hsl(0, 0%, 100%), 
-        to hsl(0, 100%, 98%);
-    --submit-grad: 135deg, 
-        from hsl(0, 80%, 86%), 
-        to hsl(0, 74%, 74%);
+    --mobile-grad: linear-gradient(135deg,
+        hsl(0, 0%, 100%), 
+        hsl(0, 100%, 98%));
+    --submit-grad: linear-gradient(135deg, 
+        hsl(0, 80%, 86%), 
+        hsl(0, 74%, 74%));
     /* Font */
     --ff: 'Josefin Sans', sans-serif;
     --fw-light: 300;
@@ -46,3 +46,102 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 /* ====== Style ====== */
+body {
+  font-family: var(--ff);
+  font-size: 16px;
+}
+
+/* ====== Main ====== */
+.container {
+  max-width: 90rem;
+}
+
+/* ====== Logo ====== */
+.logo {
+  max-width: 10rem;
+  padding: 2rem;
+}
+
+/* ====== Portrait ====== */
+.cover {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+/* ====== Content ====== */
+.content {
+  background: var(--mobile-grad);
+  padding-block: 4rem;
+  padding-inline: 2rem;
+  text-align: center;
+}
+
+.empty-title {
+  position: absolute;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  top: 0;
+  left: 0;
+}
+
+.title-one,
+.title-two {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75rem;
+  line-height: 1.1;
+}
+.title-one {
+  font-weight: var(--fw-light);
+  color: var(--par-clr);
+}
+
+.title-two {
+  font-weight: var(--fw-semiBold);
+  color: var(--coming-clr);
+}
+
+.description {
+  font-size: 0.875rem;
+  font-weight: var(--fw-regular);
+  color: var(--par-clr);
+  padding-block: 1rem;
+}
+
+/* ====== Email form ====== */
+.email-form {
+  padding-block: 1rem;
+}
+
+.mail-component {
+  position: relative;
+}
+
+#typeEmail {
+  background: transparent;
+  border: 1px solid var(--par-clr);
+  border-radius: 2rem;
+  padding: 0.75rem 1.5rem;
+  width: 100%;
+}
+
+#typeEmail::placeholder {
+  color: var(--par-clr);
+  opacity: 0.5;
+  font-size: 0.875rem;
+}
+
+.send-email {
+  position: absolute;
+  height: 100%;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  border-radius: 2rem;
+  padding-inline: 1.75rem;
+  border: none;
+  background: var(--submit-grad);
+  box-shadow: 0px 0px 20px -10px black;
+}

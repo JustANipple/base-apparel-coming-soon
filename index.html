@@ -41,29 +41,30 @@
 
     <section class="content">
 
-      <h1 class="title">We're coming soon</h1>
+      <h1 class="empty-title">Base apparel coming soon</h1>
+      <h2 class="title-one">We're </h2>
+      <h2 class="title-two">coming soon</h2>
 
       <p class="description">
         Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.
       </p>
 
-      <form action="#" class="header-email-form">
+      <form action="#" class="email-form">
         <label for="typeEmail" hidden>Email:</label>
-        <input 
-        type="email" 
-        id="typeEmail" 
-        placeholder="Email Address"
-        pattern="^[a-z0-9]+@[a-z0-9]+\.[a-z]+"
-        required>
-        <p class="error-message">
-          Please provide a valid email
-        </p>
-        <button type="submit" class="send-email">
-          <img 
-          src="images/icon-arrow.svg" 
-          alt="" 
-          aria-hidden="true">
-        </button>
+        <div class="mail-component">
+          <input 
+          type="email" 
+          id="typeEmail" 
+          placeholder="Email Address"
+          pattern="^[a-z0-9]+@[a-z0-9]+\.[a-z]+"
+          required>
+          <button type="submit" class="send-email">
+            <img 
+            src="images/icon-arrow.svg" 
+            alt="" 
+            aria-hidden="true">
+          </button>
+        </div>
       </form>
 
     </section>
