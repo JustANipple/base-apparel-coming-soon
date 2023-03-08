@@ -33,10 +33,18 @@
     </header>
 
     <div class="cover">
-      <img 
-      src="images/hero-mobile.jpg" 
-      alt="" 
-      aria-hidden="true">
+      <picture>
+        <source 
+        media="(max-width: 767px)" 
+        srcset="images\hero-mobile.jpg">
+        <source 
+        media="(min-width: 768px)" 
+        srcset="images\hero-desktop.jpg">
+        <img 
+        src="images\hero-mobile.jpg" 
+        alt="" 
+        aria-hidden="true">
+      </picture>
     </div>
 
     <section class="content">
