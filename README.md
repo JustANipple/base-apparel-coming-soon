@@ -36,7 +36,7 @@ Users should be able to:
 - HTML solution: [HTML](https://github.com/JustANipple/base-apparel-coming-soon/blob/master/index.html)
 - CSS solution: [CSS](https://github.com/JustANipple/base-apparel-coming-soon/blob/master/style.css)
 - JS solution: [JS](https://github.com/JustANipple/base-apparel-coming-soon/blob/master/script.js)
-- Live Site URL: [LIVE](https://your-live-site-url.com)
+- Live Site URL: [LIVE](https://justanipple.github.io/base-apparel-coming-soon/)
 
 ## My process
 
