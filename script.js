@@ -19,6 +19,7 @@ email.addEventListener("change", (event) => {
 });
 
 button.addEventListener("click", (event) => {
+    console.log(regex.test(emailText));
     if(regex.test(emailText)) {
         window.location.reload();
     } else {
