@@ -66,6 +66,12 @@
           placeholder="Email Address"
           pattern="^[a-z0-9]+@[a-z0-9]+\.[a-z]+"
           required>
+          <div class="error-icon">
+            <img 
+            src="images/icon-error.svg" 
+            alt="" 
+            aria-hidden="true">
+          </div>
           <button type="submit" class="send-email">
             <img 
             src="images/icon-arrow.svg" 
@@ -73,6 +79,7 @@
             aria-hidden="true">
           </button>
         </div>
+        <p class="email-error">Please provide a valid email</p>
       </form>
 
     </section>

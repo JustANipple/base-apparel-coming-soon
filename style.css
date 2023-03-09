@@ -96,6 +96,7 @@ body {
   letter-spacing: 0.75rem;
   line-height: 1.1;
 }
+
 .title-one {
   font-weight: var(--fw-light);
   color: var(--par-clr);
@@ -115,7 +116,7 @@ body {
 
 /* ====== Email form ====== */
 .email-form {
-  padding-block: 1rem;
+  padding-block: 1rem 0;
 }
 
 .mail-component {
@@ -136,6 +137,16 @@ body {
   font-size: 0.875rem;
 }
 
+.error-icon {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  height: fit-content;
+  right: 7rem;
+}
+
 .send-email {
   position: absolute;
   height: 100%;
@@ -150,36 +161,87 @@ body {
   box-shadow: 0px 0px 20px -10px black;
 }
 
+.email-error {
+  visibility: hidden;
+  color: var(--email-error-clr);
+  margin-inline-start: 1.75rem;
+  margin-block-start: 0.5rem;
+  font-size: 0.825rem;
+}
 
 /* ====== Desktop view ====== */
 @media screen and (min-width: 768px) {
+
   body {
     min-height: 100%;
   }
+
   /* ====== Main ====== */
   .container {
     display: grid;
     grid-template-areas: 
     "logo cover"
     "content cover";
-    grid-template-columns: 1.4fr 1fr;
+    grid-template-columns: 1.36fr 1fr;
+    background-image: url(images/bg-pattern-desktop.svg);
+  }
+
+  /* ====== Logo ====== */
+  .logo {
+    max-width: unset;
+    height: min-content;
+    padding-block: 4rem;
+    padding-inline: 10rem;
   }
 
   /* ====== Portrait ====== */
   .cover {
     grid-column: 2;
-    grid-row: 1/3;
-    width: 100%;
+    grid-row: 1/5;
   }
 
   .cover img {
+    min-height: 50rem;
+    object-fit: cover;
   }
 
+  /* ====== Content ====== */
   .content {
-    
+    padding-inline: 10rem;
+    background: unset;    
+    text-align: left;
+    grid-row: 2/5;
+    margin-inline-end: 5rem;
   }
-  
-  .logo {
-    
+
+  .title-one,
+  .title-two {
+    font-size: 4rem;
+  }
+
+  .description {
+    font-size: unset;
+    padding-block: 1.25rem;
+    line-height: 1.75;
+  }
+
+  /* ====== Email form ====== */
+  .email-form {
+    padding-block: 1.25rem;
+  }
+
+  #typeEmail {
+    padding: 1rem 1.75rem;
+  }
+
+  #typeEmail::placeholder {
+    font-size: unset;
+  }
+
+  .send-email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
   }
 }
