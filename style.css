@@ -255,11 +255,6 @@ body {
     width: 6rem;
   }
 
-  .send-text {
-    position: absolute;
-    opacity: 0;
-  }
-
   .error-icon {
     right: 7rem;
   }
